@@ -30,7 +30,7 @@ public class CommonMethods {
             case "Safari":
                 driver = new SafariDriver();
                 break;
-            default:
+             default:
                 throw new RuntimeException("Invalid Browser Name");
         }
         driver.manage().window().maximize();

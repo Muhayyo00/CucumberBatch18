@@ -8,8 +8,7 @@ import java.util.Properties;
         public static String read(String key)  {
             return read(key, Constants.CONFIG_FILE_PATH);
         }
-
-        public static String read(String key, String path)  {
+        public static String read(String key, String path){
 
             Properties properties = new Properties();
             try (FileInputStream fis = new FileInputStream(path))

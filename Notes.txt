@@ -84,7 +84,7 @@ to execute all the test cases
 to execute some of the test cases
 to execute one of the test cases
 
-
+***** Junit is the parent of SetNG and Java ******
 
 class 3-
 recap-
