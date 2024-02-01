@@ -75,7 +75,7 @@ java - for all the technical parts
 resources - for all the non-tech parts
 
 feature file - in this, we write scenarios
-steps package - to keep all step defs
+steps package - to keep all step definitions
 
 utils  package is for all the utility classes
 
@@ -83,3 +83,20 @@ We need to control the flow of execution
 to execute all the test cases
 to execute some of the test cases
 to execute one of the test cases
+
+
+
+class 3-
+recap-
+
+runner class
+we need junit to work with cucumber
+cucumber options-
+features-the path of feature directory to execute all the TC's(test cases) in one go
+glue-the path of the steps package, runner class will find all the step definitions here
+dry run-if we set it to true, it will stop actual execution and scans all the step if any step is missing,
+it will give me step definition for that step. If we set it to false, then again execution will start.
+tags-when we need to execute specific group of test cases or any specific TC, we use tags.
+There is no limitation of using tags in scenarios.
+If I want to execute scenarios based on 2 conditions,
+

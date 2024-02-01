@@ -1,8 +1,8 @@
 Feature: Login functionality
 //Feature->should be the first line
 
+  @sprint1 @nasima @poorna @regression @carlos @smoke
   Scenario: Valid admin login
-    //in stead of Given/When/Then/And-> we can use * as well as a short cut
     Given user is navigated to HRMS application
     When user enters admin username and password
     And user clicks on login button

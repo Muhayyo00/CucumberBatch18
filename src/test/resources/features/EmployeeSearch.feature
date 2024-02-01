@@ -1,6 +1,7 @@
 Feature: Search an employee in HRMS system
 //Feature->should be the first line
 
+  @sprint2 @regression
   Scenario: search an employee by id
     Given user is navigated to HRMS application
     When user enters admin username and password
@@ -12,6 +13,7 @@ Feature: Search an employee in HRMS system
     And user clicks on search button
     Then user should be able to see employee details
 
+  @sprint3 @regression
   Scenario: search an employee by name
     Given user is navigated to HRMS application
     When user enters admin username and password
