@@ -100,3 +100,75 @@ tags-when we need to execute specific group of test cases or any specific TC, we
 There is no limitation of using tags in scenarios.
 If I want to execute scenarios based on 2 conditions,
 
+
+class 4-
+recap--
+runner class- we need a runner class to control the flow of execution. When I need to execute one of the,
+of several of them, or the whole class
+cucumber options-
+
+features-
+
+glue-
+dryRun-
+tags-
+plugin-pretty-it prints all the step definitions in console
+common methods-we have all common methods
+
+hooks-we will write the pre-condition and post condition here
+hooks class will always be in steps package
+@before tag for pre-condition
+@after tag for post-condition
+background-in background, we write all the steps in feature file, which is common in all the scenarios.
+Once the flow is broken, we cannot write the steps in the background and it does not matter how many steps
+are common after the flow is broken. We cannot write them in background, because the flow is broken.
+Background is limited to one feature file, it means every feature file background will be different.
+hooks vs background
+Hooks are applicable for all the feature files
+Background is applicable for one feature file
+flow of execution first: First hooks will execute, second background and third scenario will execute
+
+Data Driven Testing(DDT)-when your one scenario is executing against multiple sets of data our framework is hybrid-it supports BDD and DDT
+
+
+class 5-
+recap-
+
+we can pass data from feature file in terms of parameters "data value", it will be considered
+as a parameter.
+
+we can achieve Data Driven Testing using feature file. We use example table with scenario outline to
+pass multiple sets of data.
+
+hooks- will execute as many times as data sets
+background- based on number of data set
+scenario-based on the number of data set
+
+Assertions-in cucumber we use junit assertions.The main functions of assertions are checking validation of webelements and
+checking their location. In assertion, we perform 2 things: true and equals.
+
+true-checks the existence of the element/text/field
+equals-checks the exact value of the element
+
+Verification-when you read the documentation, without access to app, system and playing with functions
+Validation-when you deal with actual system, play with functions and elements.
+POM-page object model design pattern.
+as per this design, we have a class for each page available in website. We will keep locators for this page
+in the respective class.
+ login page locators will be in login-page class and so on. We call these locators as object repositories.
+
+First, create page class and add object repository
+then, create the constructor and call page factory
+then create the object of the class in page initializer class
+then comment out previous web element and call objects with web elements
+
+Approaches in passing the data:
+1.Hard-coded approach, where you manually write the code
+2.Use pass the code through the config.properties files
+3.pass the data through feature file in terms of parameters
+4.achieve data driven testing using feature file with the help of a data table using scenario outline
+
+
+
+
+

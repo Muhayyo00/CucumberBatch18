@@ -1,22 +1,26 @@
 package utils;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.v85.page.Page;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import java.time.Duration;
 
-public class CommonMethods {
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.util.Date;
+
+public class CommonMethods extends PageInitializer {
 
     public static WebDriver driver;
 
     public void openBrowserAndLaunchApplication() {
-//
         switch (ConfigReader.read("browser")){
             case "Chrome":
                 driver=new ChromeDriver();
@@ -30,12 +34,14 @@ public class CommonMethods {
             case "Safari":
                 driver = new SafariDriver();
                 break;
-             default:
+            default:
                 throw new RuntimeException("Invalid Browser Name");
         }
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.get(ConfigReader.read("url"));
+        //this ,method will call all the objects
+        initializePageObjects();
     }
 
     public void closeBrowser() {
@@ -84,5 +90,33 @@ public class CommonMethods {
     public void jsClick(WebElement element){
         getJSExecutor().executeScript("arguments[0].click();", element);
     }
+
+
+    public byte[] takeScreenshot(String fileName){
+        //it accepts array of byte in cucumber for the screenshot
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        byte[] picByte = ts.getScreenshotAs(OutputType.BYTES);
+        File sourceFile = ts.getScreenshotAs(OutputType.FILE);
+
+        try {
+            FileUtils.copyFile(sourceFile,
+                    new File(Constants.SCREENSHOT_FILEPATH +
+                            fileName+" "+
+                            getTimeStamp("yyyy-MM-dd-HH-mm-ss")+".png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return picByte;
+    }
+
+    public String getTimeStamp(String pattern){
+        //this method will return the timestamp which we will add in ss method
+        Date date = new Date();
+        //12-01-1992-21-32-34
+        //yyyy-mm-dd-hh-mm-ss
+        SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+        return sdf.format(date);
+    }
+
 
 }
