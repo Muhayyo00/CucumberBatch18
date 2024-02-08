@@ -20,4 +20,3 @@ public class EmployeeSearchPage extends CommonMethods {
     }
 
 }
-

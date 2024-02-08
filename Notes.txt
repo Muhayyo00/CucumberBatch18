@@ -168,6 +168,22 @@ Approaches in passing the data:
 3.pass the data through feature file in terms of parameters
 4.achieve data driven testing using feature file with the help of a data table using scenario outline
 
+*Interview*
+How do you validate the checkpoints?
+We are using junit assertions in a framework and implement both of the conditions such as
+true and equals methods using the boolean call and doing both positive and negative test.
+We use junit assertions to validate both of the verification and validation checkpoints.
+
+Verification-when you check the details on SRS
+Validation-when you write code and check in the application
+
+class 6-
+worked with excel reader class-to add multiple employees from excel file
+data table-to achieve data driven testing, we need data table
+
+class 7-
+recap-
+data table-for data driven testing, we tested it for one step and not for the whole scenario.
 
 
 

@@ -86,12 +86,9 @@ public class CommonMethods extends PageInitializer {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         return js;
     }
-
     public void jsClick(WebElement element){
         getJSExecutor().executeScript("arguments[0].click();", element);
     }
-
-
     public byte[] takeScreenshot(String fileName){
         //it accepts array of byte in cucumber for the screenshot
         TakesScreenshot ts = (TakesScreenshot) driver;
@@ -108,7 +105,6 @@ public class CommonMethods extends PageInitializer {
         }
         return picByte;
     }
-
     public String getTimeStamp(String pattern){
         //this method will return the timestamp which we will add in ss method
         Date date = new Date();

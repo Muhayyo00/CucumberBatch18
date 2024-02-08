@@ -1,5 +1,4 @@
 package utils;
-
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -61,4 +60,3 @@ public class ExcelReader {
         return read(Constants.EXCEL_FILE_PATH,"Sheet1");
     }
 }
-

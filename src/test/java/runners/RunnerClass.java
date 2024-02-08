@@ -1,5 +1,4 @@
 package runners;
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -18,7 +17,7 @@ import org.junit.runner.RunWith;
         dryRun = false,
         //tags = "@sprint1 and @sprint4"
         //  tags = "@sprint1 or @sprint5 or @sprint2 or @sprint6"
-        tags = "@carlos",
+        tags = "@datatable",
         plugin = {"pretty"}//is used to print our code in console pretty (i.e.detailed and organized)
 )
 
