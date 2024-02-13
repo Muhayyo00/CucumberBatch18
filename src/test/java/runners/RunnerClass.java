@@ -18,7 +18,9 @@ import org.junit.runner.RunWith;
         //tags = "@sprint1 and @sprint4"
         //  tags = "@sprint1 or @sprint5 or @sprint2 or @sprint6"
         tags = "@datatable",
-        plugin = {"pretty"}//is used to print our code in console pretty (i.e.detailed and organized)
+        //{"pretty"}-is used to print our code in console pretty (i.e.detailed and organized)
+        plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json", "rerun:target/failed.txt"}
+        //rerun plugin generates the txt file of all failed test cases
 )
 
 public class RunnerClass {

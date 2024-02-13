@@ -18,6 +18,10 @@ public class LoginPage extends CommonMethods {
     @FindBy(id="spanMessage")
     public WebElement errorMessageLoc;
 
+    public void enterUserName(){
+
+    }
+
     public LoginPage(){
         //page factory we use to initialize all the web elements and driver we pass as
         // an argument to it. this keyword means, we need to initialize all the elements

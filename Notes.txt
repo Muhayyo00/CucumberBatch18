@@ -184,6 +184,59 @@ data table-to achieve data driven testing, we need data table
 class 7-
 recap-
 data table-for data driven testing, we tested it for one step and not for the whole scenario.
+target folder-every report that you generate, will be available inside the target folder.
+reports can be in html, json and other formats.
+
+cucumber maven reporting plugin
+in pom.xml file, we have added it
+we are executing maven test command to execute the scripts
+
+Since there can be multiple reasons of the script failure, we should rerun the failed script.
+In order to rerun the failed test case, we need to add another plugin
+
+different phases of maven lifecycle:
+compile-source code converts into binary code
+install-jars will be installed in local repository
+deploy-in this phase, jars will go to remote repo
+package-code will be packaged into jars and transfer
+verify-checks the validity of the code
+test-here code will be tested
+clean-target folder will be deleted. It cleans all the unnecessary staff.
+
+class 8-
+recap-
+examples table-scenario outline
+key and value in table with examples keyword
+keys available in examples table can be used in multiple examples
+
+data table-scenario
+key and value in table without examples keyword
+keys and value in datatable will be available for just one step
+
+reports-html report-
+we need artifacts for this type of report
+runner class, under plugin, target folder
+json report-
+runner class, under plugin, target folder
+
+we use pom.xml file as an execution file
+it is our build management tool file
+maven is our build management tool
+
+screenshot method-
+array of byte
+get time stamp method, it returns time in desired pattern
+
+Scenario class holds the complete information about execution
+
+log file-details-
+execution logs-execution details/records
+console log-
+this is for local execution-log file
+
+instead of reading the details of execution in console you create a separate class as log class
+
+
 
 
 
